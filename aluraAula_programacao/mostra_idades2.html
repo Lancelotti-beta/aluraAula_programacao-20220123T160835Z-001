@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big>" + frase + "</big>");
+    pulaLinha(1);
+
+  }
+
+  var ano = 2019;
+
+  var arrayTexto = [
+    "Eu nasci em : ",
+    "Adriano nasceu em : ",
+    "Paulo nasceu em : "
+  ];
+
+  var arrayCaculo = [
+    ano - 25,
+    ano - 26,
+    ano - 32
+  ];
+
+  /* Usando Array e For para exibir as mensagens */
+  for (var i = 0; i < arrayTexto.length && i < arrayCaculo.length; i++) {
+    mostraTexto( arrayTexto[i] + arrayCaculo[i]);
+  }
+
+</script>

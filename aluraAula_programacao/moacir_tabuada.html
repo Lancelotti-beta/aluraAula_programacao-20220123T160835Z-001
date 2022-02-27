@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<title>Tabuada do Moacir</title>
+
+<script>
+
+/*
+  <!-- Exercicio da alura -->
+  document.write("5 vezes 1 é " + 5 * 1+ "<br>");
+  document.write("5 vezes 2 é " + 5 * 2+ "<br>");
+  document.write("5 vezes 3 é " + 5 * 3+ "<br>");
+  document.write("5 vezes 4 é " + 5 * 4+ "<br>");
+  document.write("5 vezes 5 é " + 5 * 5+ "<br>");
+  document.write("5 vezes 6 é " + 5 * 6+ "<br>");
+  document.write("5 vezes 7 é " + 5 * 7+ "<br>");
+  document.write("5 vezes 8 é " + 5 * 8+ "<br>");
+  document.write("5 vezes 9 é " + 5 * 9+ "<br>");
+  document.write("5 vezes 10 é " + 5 * 10+ "<br>");
+
+  <!-- Abaixo a minha resolução com o laço for  -->
+*/
+
+var valorMult = 8;
+
+let vezes = [
+  " vezes 1 é ",
+  " vezes 2 é ",
+  " vezes 3 é ",
+  " vezes 4 é ",
+  " vezes 5 é ",
+  " vezes 6 é ",
+  " vezes 7 é ",
+  " vezes 8 é ",
+  " vezes 9 é ",
+  " vezes 10 é ",
+];
+
+let mult = [
+  valorMult * 1,
+  valorMult * 2,
+  valorMult * 3,
+  valorMult * 4,
+  valorMult * 5,
+  valorMult * 6,
+  valorMult * 7,
+  valorMult * 8,
+  valorMult * 9,
+  valorMult * 10,
+];
+
+document.write("<h1>Tabuada do " + valorMult + "</h1>");
+
+for(let i = 0; i < vezes.length && i < mult.length; i++){
+  document.write(valorMult + vezes[i] + mult[i] + "<br>");
+}
+
+</script>

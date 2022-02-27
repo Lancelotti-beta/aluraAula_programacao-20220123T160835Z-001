@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+  //Aparentemnte essa "gambiarra" deu certo . . . Será que ta certo?
+  //Dia 27/02/2022 Revendo logica de programação. O problema era simples, eu estava iniciando o contador com  em 0
+  function pulaLinha(mais){
+    var contador = 1;
+    while (contador <= mais) {
+      document.write("<br>");
+      contador++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write(frase);
+    pulaLinha(4);
+  }
+
+  //temho que revisar depois.
+
+  var ano = 2016;
+
+  let arrayName = [
+    "Flavio tem ",
+    "Joaquim tem ",
+    "Barney tem "
+  ];
+
+  let arrayYear = [
+    ano - 1977,
+    ano - 1996,
+    ano - 1976
+  ];
+
+
+  for(let i = 0; i < arrayName.length && i < arrayYear.length; i++){
+    //document.write(arrayName[i] + arrayYear[i] + " anos");  /* ou */
+    mostraTexto(arrayName[i] + arrayYear[i] + " anos");
+
+  }
+
+
+
+ /*====  variavel para fazer a media das idades  =====================*/
+
+  var flavioIdade = arrayYear[0];
+  var joaquimIdade = arrayYear[1];
+  var barneyIdade = arrayYear[2];
+
+  var media = (flavioIdade + joaquimIdade + barneyIdade)/3;
+
+  mostraTexto("A media das idades é de " + Math.round(media) + " anos");
+
+
+</script>

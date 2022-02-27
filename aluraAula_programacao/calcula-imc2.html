@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big>" + frase + "</big>");
+    pulaLinha(1);
+
+  }
+
+  function calculaImc(peso, altura){
+    var imc = peso / (altura * altura);
+    return imc;
+
+  }
+
+  function imcCalculado(imc){
+    if(imc < 18.5 ){
+      mostraTexto("É melhor se cuidar, sua classificação no IMC é Magreza.");
+    } else if (imc >= 18.5 && imc <= 24.9) {
+      mostraTexto("O seu peso classificação como Normal no IMC.");
+    } else if (imc >= 25.0 && imc <= 29.9) {
+      mostraTexto("É melhor se cuidar, sua classificação no IMC esta em Sobrepeso.");
+      mostraTexto("Obesidade grau I");
+    } else if (imc >= 30.0 && imc <= 39.9) {
+      mostraTexto("É melhor se cuidar, sua classificação esta em Obsidade.");
+      mostraTexto("Obesidade grau II");
+    } else if (imc >= 40.0 ) {
+      mostraTexto("Você está classificado(a) com Obsidade Grave.");
+      mostraTexto("Obesidade grau III");
+    }
+  }
+
+  var imcJoao = calculaImc(70, 1.71);
+  var imcMiguel = calculaImc(80, 1.65);
+
+
+  mostraTexto("O imc de João é: " + imcJoao);
+  imcCalculado(imcJoao);
+  pulaLinha(1);
+
+  mostraTexto("O imc de Miguel é: " + imcMiguel);
+  imcCalculado(imcMiguel);
+  pulaLinha(1);
+
+</script>

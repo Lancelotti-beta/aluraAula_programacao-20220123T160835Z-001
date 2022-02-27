@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+
+  function pulaLinha(vezes) {
+    var cont = 0;
+    while(cont < vezes){
+      document.write("<br>");
+      cont++;
+    }
+  }
+
+  function mostraTexto(frase){
+    document.write(frase);
+    pulaLinha(1);
+  }
+
+  var anoAtual = 2022;
+  var anoInicial = 1500;
+  var diferenca = anoAtual - anoInicial;
+  var geracoes = diferenca / 28;
+
+  mostraTexto("Se passaram " + Math.round(geracoes) + " Gerações, desde " + anoInicial + " até " + anoAtual + " no Brasil.");
+
+</script>
