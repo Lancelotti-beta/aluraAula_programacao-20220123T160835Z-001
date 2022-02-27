@@ -40,16 +40,14 @@
     }
   }
 
-  var imcJoao = calculaImc(70, 1.71);
-  var imcMiguel = calculaImc(80, 1.65);
+  //pede as informações para o usuaria atraves do "prompt"
+  var nome = prompt("informe o seu nome: ");
+  var peso = prompt("Por favor, " + nome + ", Informe o seu peso: ");
+  var altura = prompt("Por favor, " + nome + ", Informe a sua altura: ");
+  //calcula o resultado para o User
+  var imc = calculaImc(peso, altura);
 
-
-  mostraTexto("O imc de João é: " + imcJoao);
-  imcCalculado(imcJoao);
-  pulaLinha(1);
-
-  mostraTexto("O imc de Miguel é: " + imcMiguel);
-  imcCalculado(imcMiguel);
-  pulaLinha(1);
+  mostraTexto("O imc de " + nome + " é: " + imc);
+  imcCalculado(imc);
 
 </script>
