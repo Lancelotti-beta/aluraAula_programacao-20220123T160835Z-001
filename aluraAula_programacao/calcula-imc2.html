@@ -42,8 +42,8 @@
 
   //pede as informações para o usuaria atraves do "prompt"
   var nome = prompt("informe o seu nome: ");
-  var peso = prompt("Por favor, " + nome + ", Informe o seu peso: ");
-  var altura = prompt("Por favor, " + nome + ", Informe a sua altura: ");
+  var peso = parseInt(prompt("Por favor, " + nome + ", Informe o seu peso: "));
+  var altura = parseInt(prompt("Por favor, " + nome + ", Informe a sua altura: "));
   //calcula o resultado para o User
   var imc = calculaImc(peso, altura);
 

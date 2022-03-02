@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big>" + frase + "</big>");
+    pulaLinha(1);
+
+  }
+
+  function sorte(n){
+    return Math.round(Math.random()*n);
+  }
+
+  function qualNumero(numero){
+    if(numero == numeroMagico){
+      mostraTexto("Você acertou o Número Mágico! :) ");
+    } else {
+      mostraTexto("Não foi desta vez  :/ ");
+      mostraTexto("O número mágico era " + numeroMagico);
+    }
+  }
+
+  function maiorMenor(numero){
+    if(numero > numeroMagico){
+      mostraTexto("O numero mágico era menor que " + numero);
+    } else if(numero < numeroMagico) {
+      mostraTexto("O número mágico era maior que " + numero);
+    } else {
+      mostraTexto("Parabéns!");
+    }
+
+  }
+
+  var numeroMagico = sorte(10);
+  console.log(numeroMagico);
+
+  alert("Descubra qual é o Número Mágico entre 1 à 10");
+  var chute = parseInt(prompt("Qual é o número mágico?"));
+  maiorMenor(chute);
+  qualNumero(chute);
+
+
+</script>

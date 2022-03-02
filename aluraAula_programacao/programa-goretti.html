@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  var convidados = parseInt(prompt("Número de convidados"));
+  var vips = parseInt(prompt("Número de convidados VIP's"));
+
+  var total = convidados + vips;
+
+  mostra("O total de convidados é " + total);
+
+/*
+ <--
+   O programa de Goretti envolve numeros mas o resultado obtido no 'prompt();' é em texto "String"
+   assim gerando um Bug com a soma de sua conta.Pois não se faz a soma e seim a concatenação.
+   Tendo em vista que o sinal de mais "+" faz concatenação, quando se trata de texto, os valores são concatenados
+   para contronar esse bug usamos o 'parseInt();' para converter as "String's" em Inteiros "int's"
+   obtendo a soma dos valores obtidos
+  -->
+
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  var convidados = prompt("Número de convidados");
+  var vips = prompt("Número de convidados VIP's");
+
+  var total = convidados + vips;
+
+  mostra("O total de convidados é " + total);
+*/
+</script>

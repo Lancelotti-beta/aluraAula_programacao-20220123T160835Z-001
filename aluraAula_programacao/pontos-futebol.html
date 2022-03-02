@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big>" + frase + "</big>");
+    pulaLinha(1);
+
+  }
+
+  function compararResultado(pontos){
+    if(pontos > 28){
+      mostraTexto(nomeDoTime + " está melhor que ano passado!");
+    } else if(pontos < 28) {
+      mostraTexto("O desempenho do " + nomeDoTime + " caiu em relação ao ano passado. Seu time esta pior.");
+    } else if(pontos == 28) {
+      mostraTexto("O " + nomeDoTime + " está com o desempenho igual ao ano passado!");
+    }
+  }
+
+  var nomeDoTime = prompt("Qual o nome do seu Time: ");
+
+  var vitorias = parseInt(prompt("Vitórias alcançadas: "));
+  var empates = parseInt(prompt("Empates alcançados: "));
+  var pontosObtidos = vitorias * 3 + empates;
+
+  mostraTexto("O " + nomeDoTime + " consegiu " + pontosObtidos + " nessa rodada do campeonato.");
+  compararResultado(pontosObtidos);
+
+</script>
