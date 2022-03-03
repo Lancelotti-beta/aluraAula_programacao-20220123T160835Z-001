@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<script>
+  /*
+  function guardaInfo(){
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    return loginCadastrado, senhaCadastrada;
+  }
+  */
+
+  function login(){
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+    var loginInformado = prompt("Informe seu login");
+    var senhaInformada = prompt("Informe sua senha");
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+      alert("Bem-vindo ao sistema " + loginInformado);
+      return true;
+    } else {
+      alert("Login inválido. Tente novamente");
+    }
+
+  }
+
+  var chances = 3;
+  var i = 0;
+
+  while( i < chances){
+    if(login() == true){
+      break;
+    }
+
+    /*login();*/
+    i++;
+  }
+
+  /* Ao iniciar a resolução deste problema, adicionei duas vezes a function login(),
+    uma dentro do while() e dentro do if(). O que gerou um "bug" na minha contagem.
+    Ao contar a primeira tentativa, ele verificava dentro da função que esta no if(), se true ele termina o loop.
+    Mas se não passar ele saia e entrava novamente na função que estava no while() e incrementava o valor do contador
+    duas vezes.
+    No login(); e no i++; do While(){}
+    Fazendo o contador ter dua chamadas, como: 0 e 0, 1 e 1, 2 e 2. Terminado o Loop com 6 chamadas.
+  */
+
+</script>

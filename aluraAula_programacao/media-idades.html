@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big><center>" + frase + "</center></big>");
+    pulaLinha(1);
+
+  }
+
+  var xFamiliares = parseInt(prompt("Quantas pessoas tem na sua familia?"));
+  var contFamiliar = 0;
+
+  var contador = 0;
+  while(contador < xFamiliares){
+    var idades = parseInt(prompt("Qual é a idade do familiar?"));
+    contFamiliar += idades;
+
+    contador++;
+  }
+
+  var media = contFamiliar / xFamiliares;
+  mostraTexto("A média das idades é: " + media);
+
+</script>

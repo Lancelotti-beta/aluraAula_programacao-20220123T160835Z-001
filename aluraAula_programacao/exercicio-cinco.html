@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write(" | " + frase + " | " );
+    //pulaLinha(1);
+  }
+
+  function nImprime(){
+    var n = 20;
+    var nFinal = 0;
+
+    while(n >= nFinal){
+      mostraTexto(n);
+      n--;
+    }
+
+  }
+
+  mostraTexto("Número de 20 á 0");
+  pulaLinha(1);
+
+  nImprime();
+
+  pulaLinha(1);
+  mostraTexto("Isso é tudo Pessoal!");
+
+</script>

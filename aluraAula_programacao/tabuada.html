@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      //document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<center>" + frase + "</center>");
+  }
+
+  for(let number = 1; number <= 10; number++){
+    mostraTexto("Tabuada do " + number);
+    pulaLinha(1);
+    for (let mult = 1; mult <= 10; mult++) {
+      var result = number * mult;
+      mostraTexto(number + " x " + mult + " = " + result);
+    }
+    pulaLinha(1);
+
+  }
+
+
+</script>

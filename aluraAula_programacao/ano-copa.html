@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big><center>" + frase + "</center></big>");
+    pulaLinha(1);
+
+  }
+
+  function anoDeCopa(ano){
+    while(primeiraCopa <= ano){
+      mostraTexto("Teve compa no ano de " + primeiraCopa);
+      primeiraCopa += 4;
+    }
+
+  }
+
+  alert("Digite o ano para receber a lista dos anos que aconteceram a Copa");
+
+  var primeiraCopa = 1930;
+  var anoCopa = parseInt(prompt("Até que ano você quer saber: "));
+
+  mostraTexto("<h1>Os anos que tiveram copa apartir de " + primeiraCopa + " foi: </h1>");
+  anoDeCopa(anoCopa);
+
+</script>

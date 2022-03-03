@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write(" | " + frase + " | " );
+    //pulaLinha(1);
+  }
+
+  function nImprime(){
+    var n = 30;
+    var nFinal = 40;
+
+    while(n <= nFinal){
+
+      if(n != 33 && n != 37){
+        mostraTexto(n);
+      } else {
+        mostraTexto("X");
+      }
+
+      /*
+      if(n == 33){
+        mostraTexto("  "); //ou n++; mostraTexto(n); > para somar mais 1 e imprimir o proximo numero
+      } else if(n == 37){
+        mostraTexto("  "); //ou n++; mostraTexto(n);
+      } else {
+        mostraTexto(n);
+      }
+      */
+
+      n++;
+    }
+
+  }
+
+  mostraTexto("Número de 30 á 40");
+  pulaLinha(1);
+
+  nImprime();
+
+  pulaLinha(1);
+  mostraTexto("Isso é tudo Pessoal!");
+
+</script>
