@@ -5,7 +5,7 @@
     cont = 1;
     while (cont <= vezes) {
       document.write("<br>");
-      document.write("<hr>");
+      //document.write("<hr>");
       cont++;
     }
 
@@ -21,16 +21,17 @@
     return Math.round(Math.random()*n);
   }
 
-  function qualNumero(numero){
+  function qualNumeroJogo(numero){
     if(numero == numeroMagico){
       mostraTexto("Você acertou o Número Mágico! :) ");
+      tenativas = 4;
+
     } else {
       mostraTexto("Não foi desta vez  :/ ");
-      mostraTexto("O número mágico era " + numeroMagico);
     }
   }
 
-  function maiorMenor(numero){
+  function maiorMenorDica(numero){
     if(numero > numeroMagico){
       mostraTexto("O numero mágico era menor que " + numero);
     } else if(numero < numeroMagico) {
@@ -38,16 +39,22 @@
     } else {
       mostraTexto("Parabéns!");
     }
-
   }
 
   var numeroMagico = sorte(10);
   console.log(numeroMagico);
+  var tenativas = 1;
 
-  alert("Descubra qual é o Número Mágico entre 1 à 10");
-  var chute = parseInt(prompt("Qual é o número mágico?"));
-  maiorMenor(chute);
-  qualNumero(chute);
+  alert("Descubra qual é o Número Mágico entre 1 à 10, em 3 Tetativas");
+  while(tenativas <= 3){
+    var chute = parseInt(prompt("Qual é o número mágico?"));
 
+    mostraTexto("<center>Numero da tenativa - " + tenativas + "</center>");
+    maiorMenorDica(chute);
+    qualNumeroJogo(chute);
+    pulaLinha(1);
+
+    tenativas++;
+  }
 
 </script>
