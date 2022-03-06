@@ -1,45 +1,44 @@
 
-
-//
-// function pulaLinha(vezes){
-//   cont = 1;
-//   while (cont <= vezes) {
-//     document.write("<br>");
-//     //document.write("<hr>");
-//     cont++;
-//   }
-//
-// }
-//
-// function mostraTexto(frase){
-//   document.write("<big>" + frase + "</big>");
-//   pulaLinha(1);
-//
-// }
-
-
-
-// var texto = document.querySelector("p");
-//
-// function maiorMenorDica(){
-//   if(campoDeBusca.value > numeroDaSorte){
-//     texto.value = "O numero mágico era menor que " + campoDeBusca.value;
-//   } else if(campoDeBusca.value< numeroDaSorte) {
-//     texto.value = "O número mágico era maior que " + campoDeBusca.value;
-//   } else {
-//     texto.value = "Parabéns, você acertou o nomero Mágico!";
-//   }
-// }
-// Tentando testar uma mensagem na tela. ainda não esta dendo certo.
-
-var numeroDaSorte = [2, 8, 10, 6]
-
 var campoDeBusca = document.querySelector("input");
 var botao = document.querySelector("button");
 
+var numeroDaSorte = nAleatorio(3);
+console.log(numeroDaSorte);
+
+//n significa número, p ssignifica Posição
 function sorte(n){
   return Math.round(Math.random()*n);
 }
+
+function nAleatorio(valorArray){
+  var nDaSorte = [];
+  var n = 1;
+  while(n <= valorArray){
+
+    var nDoLoopAtual = sorte(10);
+    var nEncontrado = false;
+
+    // if(nDaSorte != 0){
+    // Caso eu deseje excluir o zero "0" da litsa, é só comolar nessa repetição
+    // }
+    for (var p = 0; p < nDaSorte.length; p++) {
+      if(nDaSorte[p] == nDoLoopAtual){
+        nEncontrado = true;
+        break;
+      }
+    }
+
+    if (nEncontrado == false) {
+      nDaSorte.push(nDoLoopAtual);
+      n++;
+
+    }
+
+  }
+
+  return nDaSorte;
+}
+
 
 function errou(valorBoolean){
   if(valorBoolean == false){
