@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big>" + frase + "</big>");
+    pulaLinha(1);
+
+  }
+
+  //O erro do código de tânia estava na declaração do .length, pois estava escrito ".tenght" 
+  var parcelas = [10.40, 40.00, 100.18, 200];
+
+  mostraTexto("Parcelas a ser pagas: ");
+  for(var i = 0; i < parcelas.length; i = i + 1) {
+    mostraTexto(parcelas[i] + " Reais");
+  }
+  mostraTexto("FIM");
+
+</script>

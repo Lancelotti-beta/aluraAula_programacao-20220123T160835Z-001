@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+  function pulaLinha(vezes){
+    cont = 1;
+    while (cont <= vezes) {
+      document.write("<br>");
+      document.write("<hr>");
+      cont++;
+    }
+
+  }
+
+  function mostraTexto(frase){
+    document.write("<big>" + frase + "</big>");
+    pulaLinha(1);
+
+  }
+
+  //O erro do código de Jânio estava no contador, var "i = 1;"
+  //Mas como se trata de uma Array, devemos começar o contador no 0, no caso de Jânio, "var i = 0;"
+  //As array recebem o seu valor -1, ou seja, se uma array tem 4 elementos iniciando de 0, devemos
+  //atribuir x < 4 (no caso jogadores.length) pois a ultima posição será 3 (Já que o indice da Array
+  //inicia-se no 0), sendo assim,
+  //quando o loop for chegar ao valor 4
+  //sera encerrado pois 4 Não é menor que 4. Porem, a soma de 0 até 3 é 4
+
+  var jogadores = ["Saladino", "Cage", "Xur", "Rayson"];
+
+  for( var i = 0; i < jogadores.length; i++) {
+    alert(jogadores[i]);
+  }
+
+  //ou
+
+  for( var i = 0; i < 4; i++) {
+    alert(jogadores[i]);
+  }
+
+</script>

@@ -18,10 +18,6 @@
 // }
 
 
-var numeroDaSorte = sorte(10);
-
-var campoDeBusca = document.querySelector("input");
-var botao = document.querySelector("button");
 
 // var texto = document.querySelector("p");
 //
@@ -36,16 +32,33 @@ var botao = document.querySelector("button");
 // }
 // Tentando testar uma mensagem na tela. ainda não esta dendo certo.
 
+var numeroDaSorte = [2, 8, 10, 6]
+
+var campoDeBusca = document.querySelector("input");
+var botao = document.querySelector("button");
+
 function sorte(n){
   return Math.round(Math.random()*n);
 }
 
-function comparaNumeroDaSorte(){
-  if(campoDeBusca.value == numeroDaSorte){
-    alert(" Você Acerou! :) ");
-  } else {
-    alert(" Você Errou. :/  ");
+function errou(valorBoolean){
+  if(valorBoolean == false){
+    alert(" Você Errou. :/ ")
   }
+}
+
+function comparaNumeroDaSorte(){
+  var numeroSorteado = false;
+
+  for (var i = 0; i < numeroDaSorte.length; i++) {
+    if(campoDeBusca.value == numeroDaSorte[i]){
+      alert(" Você Acerou! :) ");
+      numeroSorteado = true;
+      break;
+    }
+  }
+
+  errou(numeroSorteado);
 
   campoDeBusca.value = "";
   campoDeBusca.focus();
