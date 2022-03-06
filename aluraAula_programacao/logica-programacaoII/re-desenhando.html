@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+  var quadro = document.querySelector('canvas');
+  var pincel = quadro.getContext('2d');
+
+  function desenha(color, x, y, largura, altura){
+    pincel.fillStyle = color;
+    pincel.fillRect(x, y, largura, altura);
+  }
+
+  function coloriDesenho(color){
+    pincel.fillStyle = color;
+  }
+
+  desenha('white', 0, 0, 600, 400);
+
+  // listras da bandeira
+  desenha('green', 0, 0, 200, 400);
+  desenha('red', 400, 0, 200, 400);
+
+  // formando um formas
+  // triângulo
+  pincel.fillStyle = 'yellow';
+  pincel.beginPath();
+  pincel.moveTo(300, 200);
+  pincel.lineTo(200, 400);
+  pincel.lineTo(400, 400);
+  pincel.fill();
+
+  // circulo
+  pincel.fillStyle = '#0000FF';
+  pincel.beginPath();
+  pincel.arc(300, 400, 75, 0, 2 * 3.14);
+  pincel.fill();
+
+</script>
