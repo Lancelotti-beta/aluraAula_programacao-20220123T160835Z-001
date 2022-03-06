@@ -13,6 +13,7 @@ function sorte(n){
 function nAleatorio(valorArray){
   var nDaSorte = [];
   var n = 1;
+
   while(n <= valorArray){
 
     var nDoLoopAtual = sorte(10);
