@@ -29,5 +29,5 @@ pincel.fill();
 
 corPincel("blue");
 pincel.beginPath();
-pincel.arg(400, 152.5, 75, 0, 2 * 3.14);
+pincel.arg(300, 152.5, 75, 0, 2 * 3.14);
 pincel.fill();
