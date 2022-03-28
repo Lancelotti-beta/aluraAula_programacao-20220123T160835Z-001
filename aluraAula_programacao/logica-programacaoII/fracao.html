@@ -1,0 +1,35 @@
+<canvas id="canvas" width="600" height="400"></canvas>
+
+<script type="text/javascript">
+
+  let tela = document.querySelector('canvas');
+  let pincel = tela.getContext('2d');
+
+  function desenhaQuadrado(x, y, tamanho, cor) {
+    // aqui precisamos usar fillRect, strokeRect, etc
+
+    pincel.fillStyle = cor;
+    pincel.strokeStyle = 'black';
+
+    let recebe = tamanho;
+    while(x < recebe){
+      pincel.fillRect(x, y, 50, 50);
+      pincel.strokeRect(x, y, 50, 50);
+      x += 50;
+    }
+
+    pincel.fillRect(x, y, 0, 0);
+    pincel.strokeRect(x, y, 50, 50);
+
+  }
+
+  function texto(frase, eixoX, eixoY){
+    pincel.font = '32px Georgia';
+    pincel.fillStyle = 'black';
+    pincel.fillText(frase , eixoX, eixoY);
+  }
+
+  texto('Qual é a Fração?', 200, 50)
+  desenhaQuadrado(200, 100, 350, 'green');
+
+</script>
