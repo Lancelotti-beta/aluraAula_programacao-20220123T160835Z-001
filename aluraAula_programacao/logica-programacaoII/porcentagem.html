@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Grafico</title>
+</head>
+
+<body>
+  <div class="container">
+    <canvas width="600" height="400"></canvas>
+  </div>
+
+  <script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'white';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaRetangulo(x, y, largura, altura, cor) {
+
+      pincel.fillStyle = cor;
+      pincel.fillRect(x, y, largura, altura);
+      pincel.strokeStyle = 'black';
+      pincel.strokeRect(x, y, largura, altura);
+    }
+
+    function desenhaTexto(x, y, texto) {
+      var tela = document.querySelector('canvas');
+      var pincel = tela.getContext('2d');
+
+      pincel.font = '12px Georgia';
+      pincel.fillStyle = 'black';
+      pincel.fillText(texto, x, y);
+    }
+
+    //Grafico 1 - 2015
+    desenhaRetangulo(200, 200, 75, 50, 'blue');
+    desenhaRetangulo(200, 250, 75, 25, 'green');
+    desenhaRetangulo(200, 275, 75, 20, 'yellow');
+    desenhaRetangulo(200, 295, 75, 5, 'red');
+
+    // Grafico 2 - 2016
+    desenhaRetangulo(300, 200, 75, 65, 'blue');
+    desenhaRetangulo(300, 265, 75, 20, 'green');
+    desenhaRetangulo(300, 285, 75, 13, 'yellow');
+    desenhaRetangulo(300, 298, 75, 2, 'red');
+
+    //Legenda do Grafico
+    desenhaRetangulo(80, 340, 10, 10, 'blue');
+    desenhaTexto(100, 350, 'Chorme');
+
+    desenhaRetangulo(180, 340, 10, 10, 'green');
+    desenhaTexto(200, 350, 'Firefox');
+
+    desenhaRetangulo(280, 340, 10, 10, 'yellow');
+    desenhaTexto(300, 350, 'Safari');
+
+    desenhaRetangulo(380, 340, 10, 10, 'red');
+    desenhaTexto(400, 350, 'Outro(Opera, IE, Edge, etc)');
+
+  </script>
+
+</body>
+
+</html>
