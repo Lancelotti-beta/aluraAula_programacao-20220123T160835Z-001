@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <canvas id="canvas" width="600" height="400"></canvas>
+  <script type="text/javascript">
+
+    var tela = document.querySelector('canvas');
+    var pinccel = tela.getContext('2d');
+    
+    var cores = ['red', 'blue', 'green'];
+    
+    pinccel.fillStyle = 'grey';
+    pinccel.fillRect(0, 0, 600, 400);
+    
+    function desenhaCirculo(x, y, valor, cor){
+      
+      pinccel.fillStyle = cor;
+      pinccel.beginPath();
+      pinccel.arc(x, y, valor, 0, 2*3.12);
+      pinccel.fill();
+      
+    }
+    
+    
+    var raio = 10; //Removemos 'raio' da 'functio interageComTela' para somar a cada click
+
+    function interageComTela(evento) {
+      
+      var x = evento.pageX - tela.offsetLeft;
+      var y = evento.pageY - tela.offsetTop;
+
+      var addShift = evento.shiftKey;
+      if(addShift){
+        raio = raio + 10;
+      }
+      
+      var retiraAlt = evento.altKey;
+      if(retiraAlt){
+        raio = raio - 5;
+      }
+
+      if(raio > 40 || raio < 10){
+        raio = 10;
+      }
+
+      desenhaCirculo(x, y, raio, cores[index]);
+
+      console.log('Eixo X: ' + x);
+      console.log('Eixo Y: ' + y);
+      console.log(addShift + " " + retiraAlt);
+    }
+    
+    tela.onclick = interageComTela;
+    
+    var index = 0; //De início ele cria um contador iniciado no 0 
+
+    function testeClick(){
+      index++; //Aqui ele esta incrementendo o 'index' para passar o valor na Array
+
+      //neste momento do código ele faz uma coparação com a extensão da array para dar 
+      //Reset 
+      if (index >= cores.length) {
+        index = 0;
+      }
+      
+      console.log(cores[index]);
+      return false;  
+    }
+
+    
+    tela.oncontextmenu = testeClick;
+
+  </script>
+</body>
+
+</html>
