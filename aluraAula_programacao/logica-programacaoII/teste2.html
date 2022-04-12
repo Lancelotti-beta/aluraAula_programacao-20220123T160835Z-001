@@ -48,6 +48,8 @@
       if(raio > 40 || raio < 10){
         raio = 10;
       }
+      
+      var pressionaMouse = evento.onmousedown;
 
       desenhaCirculo(x, y, raio, cores[index]);
 
@@ -55,6 +57,7 @@
       console.log('Eixo Y: ' + y);
       console.log(addShift + " " + retiraAlt);
     }
+    
     
     tela.onclick = interageComTela;
     
