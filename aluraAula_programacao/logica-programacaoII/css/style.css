@@ -5,6 +5,12 @@ body{
 
   margin: 2em;
   padding: 2em;
+  
+  align-content: center;
+}
+
+div{
+  text-align: center;
 }
 
 .container {
