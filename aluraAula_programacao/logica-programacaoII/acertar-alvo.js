@@ -38,7 +38,25 @@ function atualizaTela() {
     desenhaAlvo();
 }
 
-setInterval(atualizaTela, 500);
+setInterval(atualizaTela, 1000);
+
+tela.onclick = triroNoAlvo;
+
+function triroNoAlvo (event) {
+    var eixoX = event.pageX - tela.offsetLeft;
+    var eixoY = event.pageY - tela.offsetTop;
+
+    //meu erro foi colocar um valor fixo e não a variavel 'x' e 'y'
+    if((eixoX > x - raio) && 
+        (eixoX < x + raio) && 
+        (eixoY > y - raio) && 
+        (eixoY < y + raio)){
+            
+        alert('No alvo!');
+    }
+}
+
+
 
 /*
 
@@ -50,6 +68,7 @@ function palyGame(evento) {
     var eixoX = evento.pageX - tela.offsetLeft;
     var eixoY = evento.pageY - tela.offsetTop;
 
+    //meu erro foi colocar um valor fixo e não a variavel 'x' e 'y'
     if((eixoX > 300 - raio) && ( eixoX < 300 + raio) && (eixoY > 200 - raio) && ( eixoY < 200 + raio)){
         alert('Click');
     }
