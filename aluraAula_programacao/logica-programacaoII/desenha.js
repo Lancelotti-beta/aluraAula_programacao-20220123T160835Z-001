@@ -87,3 +87,6 @@ tela.onmouseup = desabilita;
 
 
 */
+
+
+// export { desenhaCirculo };
