@@ -20,7 +20,7 @@ function nAleatorio(valorArray){
     var nEncontrado = false;
 
     // if(nDaSorte != 0){
-    // Caso eu deseje excluir o zero "0" da litsa, é só comolar nessa repetição
+    // Caso eu deseje excluir o zero "0" da litsa, usar essa condição
     // }
     for (var p = 0; p < nDaSorte.length; p++) {
       if(nDaSorte[p] == nDoLoopAtual){

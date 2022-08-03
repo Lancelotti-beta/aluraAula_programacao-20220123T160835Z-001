@@ -4,22 +4,22 @@
 
 <script>
 
-  var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
-  var ingredientes = listaIngrediente(quantidade);
+  let quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+  let ingredientes = listaIngrediente(quantidade);
 
 
   function listaIngrediente(nLista){
-    var listaReceita = [];
-    var contador = 1;
+    let listaReceita = [];
+    let contador = 1;
 
     while( contador <= nLista) {
 
-      var ingrediente = prompt("Informe o ingrediente " + contador);
+      let ingrediente = prompt("Informe o ingrediente " + contador);
 
-      var recebeIngrediente = ingrediente;
-      var comparaIngrediente = false;
+      let recebeIngrediente = ingrediente;
+      let comparaIngrediente = false;
 
-      for (var i = 0; i < listaReceita.length; i++) {
+      for (let i = 0; i < listaReceita.length; i++) {
         if(listaReceita[i] == recebeIngrediente){
           comparaIngrediente = true;
           alert("O ingrediente já foi adicionado. Favor passar o próximo ingrediente");
