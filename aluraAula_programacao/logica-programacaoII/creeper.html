@@ -9,26 +9,36 @@
 
   var tela = document.querySelector('canvas');
   var pincel = tela.getContext('2d');
-
+  
   function artCanvas(color, x, y, largura, altura){
+
     pincel.fillStyle = color;
     pincel.fillRect(x, y, largura, altura);
+    pincel.fillstoke = '#000000'
+    pincel.strokeRect(x, y, 50, 50)
 
   }
 
-  //quadro
-  artCanvas('black', 0, 0, 600, 400);
+  var x = 0
+  while (x < 600) {
+    artCanvas('green', x, 0, 50, 50)
+    artCanvas('red', x, 50, 50, 50)
+    x += 50
+  }
 
-  //rosto Creeper
-  artCanvas('darkgreen', 130, 90, 350, 300);
-  //olhos
-  artCanvas('black', 175, 110, 90, 90);
-  artCanvas('black', 335, 110, 90, 90);
-  //nariz
-  artCanvas('black', 265, 200, 70, 130);
-  //boca
-  artCanvas('black', 330, 245, 65, 145);
-  artCanvas('black', 210, 245, 65, 145);
+  // //quadro
+  // artCanvas('black', 0, 0, 600, 400);
+
+  // //rosto Creeper
+  // artCanvas('darkgreen', 130, 90, 350, 300);
+  // //olhos
+  // artCanvas('black', 175, 110, 90, 90);
+  // artCanvas('black', 335, 110, 90, 90);
+  // //nariz
+  // artCanvas('black', 265, 200, 70, 130);
+  // //boca
+  // artCanvas('black', 330, 245, 65, 145);
+  // artCanvas('black', 210, 245, 65, 145);
 
 
 
